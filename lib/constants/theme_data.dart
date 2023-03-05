@@ -7,6 +7,11 @@ ThemeData getMyAppThemeData(BuildContext context) => ThemeData(
       ).copyWith(
         secondary: Colors.deepPurple,
       ),
+      textTheme: TextTheme(
+        displayLarge: TextStyle(
+          color: Theme.of(context).colorScheme.onSecondary,
+        ),
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.pink,
