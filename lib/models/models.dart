@@ -6,12 +6,14 @@ class NewMessageData {
   final Timestamp createdAt;
   final String userId;
   final String username;
+  final String userImage;
 
   NewMessageData({
     @required this.text,
     @required this.createdAt,
     @required this.userId,
     @required this.username,
+    @required this.userImage,
   });
 
   Map<String, dynamic> toJson() => {
@@ -19,6 +21,7 @@ class NewMessageData {
         'createdAt': this.createdAt,
         'userId': this.userId,
         'username': this.username,
+        'userImage': this.userImage,
       };
 
   factory NewMessageData.fromJson(Map<String, dynamic> jsonMessage) =>
@@ -27,5 +30,6 @@ class NewMessageData {
         createdAt: jsonMessage['createdAt'],
         userId: jsonMessage['userId'],
         username: jsonMessage['username'],
+        userImage: jsonMessage['userImage'],
       );
 }
